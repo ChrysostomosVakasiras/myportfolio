@@ -1,0 +1,229 @@
+body{
+    margin: 0px;
+    font-family:'Times New Roman', Times, serif ;
+    background: linear-gradient(to bottom ,rgb(1,1,1),rgb(1, 1, 4));
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 200vh;
+    z-index: -1;
+  }
+.brand{
+    color: white;
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+   
+    
+}
+.nav-wrapper > .left-wrapp{
+    display: flex;
+}
+.nav-wrapper > .left-wrapp >div{
+    margin-right: 50px;
+    font-size: medium;
+    text-transform: uppercase;
+    
+}
+.left-link{
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+.left-link > a{
+    text-decoration: none;
+    color: rgb(249, 252, 255);
+    transition: color 0.5s;
+}
+.left-link:hover{
+    border-bottom: 1px solid wheat;
+}
+.left-link > a:hover{
+    color: rgb(65, 141, 255);
+}
+
+.portfolio-items-wrapper{
+    display: grid;
+    grid-template-columns:1fr   1fr;
+    padding:50px;
+    row-gap: 20px;
+    column-gap:100px ;
+
+}
+.portfolio-item-wrapper{
+    cursor: pointer;
+    position: relative;
+    /*Cause we want to have the children be on top (absolute)*/
+}
+
+.portfolio-img{
+    height: 350px;
+    width: 100%;
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.portfolio-logo-text{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.portfolio-logo-text img{
+    width: 50%;
+    margin-bottom: 10px;   
+
+}
+.portfolio-logo-text .subtitle{
+    color: transparent;
+}
+.subtitles{
+    transition: 1s;
+    font-weight: 600;
+    color: wheat;
+    transition: 1s;
+
+}
+.img-darken{
+    transition: 1s;
+    filter: brightness(20%);
+}
+.logo{
+    opacity: 0;
+}
+
+
+/* About*/
+.two-column-wrapper{
+    display: flex;
+    
+}
+.profile-content-wrapper{
+    margin-left:5rem ;
+    color: black;
+}
+.profile-content-wrapper h1{
+    color: teal;
+}    
+
+.active-nav-link{
+    border-bottom: 1px solid  white;
+}
+.active-nav-link a{
+    color: rgb(73, 127, 243) !important;
+}
+.back{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    margin-top: 4rem;
+    padding:10px;
+    border-radius: 10px;
+    font-size: .7rem;
+    color: bisque;
+    background-color: black;
+    cursor: pointer;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+.website ,.source{
+    height: 20px;
+    width: auto;
+    font-style:italic ;    
+    border: 3px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    font-display: unset;
+    text-decoration: none;
+    background-color: black;
+    color: bisque;
+    margin-left: 3rem;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, .5);
+}
+
+.popup{
+    position: absolute;
+    width: 100vw;
+    background-color: floralwhite;
+    height: 80vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin: 4rem auto;
+}
+.gifcontainer-left{
+   width:60vw;
+   height: 70vh;
+}
+.text{
+    margin: 0rem auto; 
+     
+}
+.list{
+ text-align: start;
+ margin: 2rem 2rem;
+}
+.gifcontainerright{
+    height: 30vh;
+    display: grid;
+    margin: 2rem auto;
+}
+.content-wraper-about{
+    background-color: whitesmoke;
+}
+@media screen and (max-width:900px){
+    .portfolio-items-wrapper{
+        display: grid;
+        grid-template-columns:1fr;
+        height: 500px;
+    }
+    .popup{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .gifcontainer-left{
+        width: 400px;
+        height: 300px;
+    }
+    .text{
+        display: grid;
+        max-width: 100vw;
+        font-size: small;
+        padding-top: -20px;
+    }
+    .gifcontainerright{
+        display: block;
+        visibility: hidden;
+    }
+    .source{
+        width: 100px;
+        margin: 10px auto;
+    }
+    .website{
+        width: 100px;
+        margin: 0px auto;
+    }
+    .profile-content-wrapper{
+        margin: 0 auto;
+        font-size: smaller;
+    }
+
+}
